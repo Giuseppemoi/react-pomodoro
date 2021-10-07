@@ -1,2 +1,5 @@
 .idea/
-.DS_st
+node_modules/
+package-lock.json
+.parcel-cache/
+dist/
