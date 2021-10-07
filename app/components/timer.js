@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react'
 
 function Timer() {
-    const [minutes, setMinutes] = useState(1)
-    const [seconds, setSeconds] = useState(5)
+    const [minutes, setMinutes] = useState(0)
+    const [seconds, setSeconds] = useState(0)
     const [play, setPlay] = useState(false)
 
     useEffect(() => {
+        console.log('ok')
         let interval
         if (play) {
             interval = setInterval(() => {
@@ -67,12 +68,14 @@ function Timer() {
     const timerSeconds = seconds < 10 ? `0${seconds}` : seconds
 
     return (
-        <div>
-            <div>{timerMinutes} : {timerSeconds}</div>
-            <button onClick={playPause}>{setButtonPlay()}</button>
-            <button onClick={increaseMinutes}>+</button>
-            <button onClick={decreaseMinutes}>-</button>
-            <button onClick={resetTimer}>Reset</button>
+        <div className="container">
+            <div className="timer">{timerMinutes} : {timerSeconds}</div>
+            <div className="buttons">
+                <button onClick={playPause}>{setButtonPlay()}</button>
+                <button onClick={increaseMinutes}>+</button>
+                <button onClick={decreaseMinutes}>-</button>
+                <button onClick={resetTimer}>Reset</button>
+            </div>
         </div>
     )
 }

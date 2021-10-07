@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #1a2b3c;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .timer {
+    font-size: 1000%;
+  }
+
+  button {
+    width: 15vh;
+    height: 5vh;
+    margin: 0 1vh;
+    font-size: 150%;
+    font-weight: bolder;
+    color: #fff;
+    background-color: #123456;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    &:active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+  }
+
+}
